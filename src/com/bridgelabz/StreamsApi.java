@@ -1,15 +1,13 @@
 package com.bridgelabz;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
-//We Use StreamAPI To perform operation on collections more efficiently with reduced code
+/*We Use StreamAPI To perform operation on collections more efficiently with reduced code.
+Java Streams can be visualized as streaming/sequencing of data from a Source. A stream is
+not a data structure and does not store elements.*/
 public class StreamsApi {
 
     public static void main(String[] args) {
-//        Java Streams can be visualized as streaming/sequencing of data from a Source. A stream is
-//        not a data structure and does not store elements.
 //        Consumer<Integer> consumer = var -> System.out.println(var);
 //        consumer.accept(6);
 //        Function<Integer,Integer> ref2 = x -> x*100;
