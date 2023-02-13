@@ -1,8 +1,6 @@
 package com.bridgelabz;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 //We Use StreamAPI To perform operation on collections more efficiently with reduced code
 public class StreamsApi {
@@ -22,7 +20,11 @@ public class StreamsApi {
         list.add(55);
         list.add(88);
         //forEach method is used to iterate through each element of the stream and print it to the console.
-        list.stream().forEach(num -> System.out.println(num));
+        list.stream().forEach(num -> System.out.print(num + " , "));
+
+        System.out.println();
+        List<Double> result = list.stream().map(num -> num * 2.0).toList();
+        System.out.println("Double : " + result);
 
     }
 }
