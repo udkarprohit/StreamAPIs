@@ -26,9 +26,12 @@ public class StreamsApi {
         System.out.println();
         List<Double> result = list.stream().map(num -> num * 2.0).toList();
         System.out.println("Double : " + result);
-
+        //Store the Transformed double value into a new List
         List<Double> doubleNumber = list.stream().map(num -> num * 2.0).collect(ArrayList::new, (list1,number) -> list1.add(number) , (list2,list3) -> list2.addAll(list3));
         System.out.println("Another List : " + doubleNumber);
+        //Filter the even numbers from then umber Stream and store the result
+        List<Integer> evenNumber = list.stream().filter(even -> even % 2 == 0).collect(Collectors.toList());
+        System.out.println("Even Numbers : " + evenNumber);
 
     }
 }
