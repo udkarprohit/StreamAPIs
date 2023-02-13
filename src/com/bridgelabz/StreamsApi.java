@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 //We Use StreamAPI To perform operation on collections more efficiently with reduced code
 public class StreamsApi {
@@ -25,6 +26,9 @@ public class StreamsApi {
         System.out.println();
         List<Double> result = list.stream().map(num -> num * 2.0).toList();
         System.out.println("Double : " + result);
+
+        List<Double> doubleNumber = list.stream().map(num -> num * 2.0).collect(ArrayList::new, (list1,number) -> list1.add(number) , (list2,list3) -> list2.addAll(list3));
+        System.out.println("Another List : " + doubleNumber);
 
     }
 }
