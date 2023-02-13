@@ -32,6 +32,12 @@ public class StreamsApi {
         //Filter the even numbers from then umber Stream and store the result
         List<Integer> evenNumber = list.stream().filter(even -> even % 2 == 0).collect(Collectors.toList());
         System.out.println("Even Numbers : " + evenNumber);
-
+        //First Even Number
+        Optional<Integer> firstEvenNumber = list.stream().filter(num -> num % 2 == 0).findFirst();
+        if (firstEvenNumber.isPresent()) {
+            System.out.println("First even number: " + firstEvenNumber.get());
+        } else {
+            System.out.println("No even numbers found.");
+        }
     }
 }
